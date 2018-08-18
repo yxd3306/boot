@@ -1,3 +1,4 @@
+#.yml配置文件   : 后面需要接空格  然后才是参数
 eureka:
   client:
     serviceUrl:
@@ -7,3 +8,26 @@ server:
 spring:
   application:
     name: boot-manager-web
+    
+    
+  #配置热部署生效
+  devtools:
+    restart:
+      enabled: true
+      #添加那个目录的文件需要restart
+      additional-paths: src/main/java
+      #排除那个目录的文件不需要restart
+      exclude: static/**
+      
+  freemarker:
+    allow-request-override: false
+    cache: true
+    check-template-location: true
+    charset: UTF-8
+    content-type: text/html; charset=utf-8
+    expose-request-attributes: false
+    expose-session-attributes: false
+    suffix: .html
+    template-loader-path: classpath:/views/
+    expose-spring-macro-helpers: false
+    request-context-attribute: rc    

@@ -9,4 +9,6 @@
   <packaging>pom</packaging>
   
   
-  <modules></modules></project>
+  <modules>
+  	<module>boot-manager-dao</module>
+  </modules></project>

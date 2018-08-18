@@ -4,7 +4,17 @@ server:
 spring:
   application:
     name: boot-manager-service
-
+  #配置热部署生效
+  devtools:
+    restart:
+      enabled: true
+      #添加那个目录的文件需要restart
+      additional-paths: src/main/java
+      #排除那个目录的文件不需要restart
+      exclude: static/**
+  
+  
+  
 eureka:
   client:
     serviceUrl:

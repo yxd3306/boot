@@ -13,12 +13,12 @@ import org.springframework.web.client.RestTemplate;
 @EnableDiscoveryClient
 public class BootManagerConsumerApp {
 
-	public static void main(String[] args) {
-		SpringApplication.run(BootManagerConsumerApp.class, args);
-	}
-	
-	@Bean
-    @LoadBalanced//开启负载均衡的功能。
+    public static void main(String[] args) {
+        SpringApplication.run(BootManagerConsumerApp.class, args);
+    }
+
+    @Bean
+    @LoadBalanced // 开启负载均衡的功能。
     RestTemplate restTemplate() {
         return new RestTemplate();
     }

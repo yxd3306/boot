@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="/js/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$.ajax({
+			type : "get",
+			url : "http://localhost:8081/list",
+			async : false,
+			success : function(data) {
+				alert(data.le)
+			}
+		})
+	})
+</script>
+</head>
+<body>
+	<a href="https://www.baidu.com"> 
+		<img alt="图片" src="http://132.232.33.227:9090/group1/M00/00/00/rBsAA1t1la-Ac0gZAAEFS5LVTKQ675.jpg">
+	</a>
+	<h1>${name}</h1>
+</body>
+</html>
